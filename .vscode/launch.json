@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug CLASS with LLDB",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/class",
+      "args": ["auto_ncdmfa_mb_fw10_synchronous.ini"],
+      "cwd": "${workspaceFolder}",
+      "stopOnEntry": false,
+      "runInTerminal": true
+    }
+  ]
+}
