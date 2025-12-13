@@ -1,7 +1,45 @@
 # CLASS-modified
 Modified CLASS code for my graduation thesis, and also for practise.
 
-CLASS: Cosmic Linear Anisotropy Solving System  {#mainpage}
+# Undergraduate Thesis Project
+
+
+**Research on the Impact of Dark Matter Properties on Gravitational Lensing Effects**
+
+**Author**: Ma Tianyang (https://github.com/Iris-247)
+
+**Date**: December 2025
+
+**Supervisor**: Xu lixin
+
+This repository contains a modified version of the official CLASS (Cosmic Linear Anisotropy Solving System) code to implement and compare two Warm Dark Matter (WDM) fluid-approximation models for my undergraduate thesis.
+
+## Abstract
+
+This thesis investigates the linear perturbation behavior of two fluid-approximation models of Warm Dark Matter (WDM) within the CLASS numerical framework. 
+
+The first model, referred to as the **quasi-free-streaming model**, includes anisotropic stress by retaining density, velocity, and shear perturbations. This structure forms a simplified framework analogous to a truncated Boltzmann hierarchy. Numerical simulations demonstrate that this model leads to a scale-wide suppression of structure formation, which becomes more pronounced with increasing values of the equation-of-state parameter *w*. This effect is particularly evident in the matter power spectrum and CMB lensing potential, reflecting the enhanced smoothing of gravitational potentials caused by WDM free-streaming.
+
+In contrast, the **entropy perturbation model** excludes the shear term and instead introduces non-adiabatic pressure and momentum feedback. Power suppression primarily appears at intermediate scales, and the overall response remains weak across variations in *w*. The lensing potential also shows limited sensitivity, suggesting that non-adiabatic effects alone contribute modestly to gravitational potential evolution. However, instabilities emerge at very large and small scales, indicating insufficient feedback closure in the absence of shear damping.
+
+These behaviors are broadly consistent with the predictions of the Generalized Dark Matter (GDM) framework. This study provides a comparative characterization of two physically distinct WDM models and analyzes their respective impacts on structure growth and CMB lensing signatures.
+
+**Key Words**: Warm Dark Matter; Non-cold Dark Matter; Linear Perturbation; Gravitational Lensing; CLASS
+
+→ [Full Thesis PDF (42 pages)](https://your-pdf-link-here)  <!-- e.g., Baidu Netdisk or Google Drive share link -->
+
+## Modifications
+- Primary changes in `source/perturbations.c`: Implemented perturbation equations for both WDM models.
+- Root directory: Added custom `.ini` files (`auto_ncdmf_nab_fw*.ini`) for systematic *w* parameter scans.
+
+## Build and Run Instructions
+Tested on Ubuntu Linux with GCC.
+
+
+make clean && make -j8   # Compile (fast, ~1 minute)
+./build/class auto_ncdmf_nab_fw50_synchronous.ini   # Run an example
+
+#CLASS: Cosmic Linear Anisotropy Solving System  {#mainpage}
 ==============================================
 
 Authors: Julien Lesgourgues, Thomas Tram, Nils Schoeneberg
