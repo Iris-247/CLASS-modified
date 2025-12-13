@@ -1,5 +1,6 @@
 # CLASS-modified
-Modified CLASS code for my graduation thesis, and also for practise.
+Modified CLASS code for my graduation thesis, and also for practise. 
+For full project description, please see the README in the `main` branch.
 
 CLASS: Cosmic Linear Anisotropy Solving System  {#mainpage}
 ==============================================
