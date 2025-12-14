@@ -8,11 +8,12 @@ Modified CLASS code for my graduation thesis, and also for practise.
 
 **Author**: Ma Tianyang (https://github.com/Iris-247)
 
-**Date**: December 2025
+**Date**: June 2025
 
-**Supervisor**: Xu lixin
+**Supervisor**: Xu Lixin
 
-This repository contains a modified version of the official CLASS (Cosmic Linear Anisotropy Solving System) code to implement and compare two Warm Dark Matter (WDM) fluid-approximation models for my undergraduate thesis.
+This repository contains a modified version of the official CLASS (Cosmic Linear Anisotropy Solving System) code to implement and compare two Warm Dark Matter (WDM) fluid-approximation models for my undergraduate thesis. 
+main branch is for **entropy perturbation model** and quasi-free branch for **entropy perturbation model**.
 
 ## Abstract
 
@@ -26,18 +27,32 @@ These behaviors are broadly consistent with the predictions of the Generalized D
 
 **Key Words**: Warm Dark Matter; Non-cold Dark Matter; Linear Perturbation; Gravitational Lensing; CLASS
 
-→ [Full Thesis PDF (42 pages)](https://your-pdf-link-here)  <!-- e.g., Baidu Netdisk or Google Drive share link -->
+→ [Full Thesis PDF](https://your-pdf-link-here)[Chinese]
 
 ## Modifications
-- Primary changes in `source/perturbations.c`: Implemented perturbation equations for both WDM models.
-- Root directory: Added custom `.ini` files (`auto_ncdmf_nab_fw*.ini`) for systematic *w* parameter scans.
+- Primary changes in `source/perturbations.c`(marked with `equation-of-state`) and in `source/background.c`（marked with `adiabatic initial conditions` and with `perturbation equations`): Implemented initial conditions and perturbation equations for both WDM models and equation-of-state for WDM.
+- For systematic equation-of-state *w* parameter scans,  you need to run `make clean && make -j8` to recompile before executing the `.ini` files. (values used in simulation: `1e-6`, `1e-5`, `1e-4`) 
+- CLASS itself does not natively support a standalone *w* parameter for WDM fluid models(WDM is classfied as non-cold dark matter(*NCDM*)), I made use of CLASS's flexible parameter transmission structures to modify my own custome WDM model.
+- Adjusted gauge transformation procedures between synchronous and Newtonian gauges，I verified metric variable matching to ensure physical consistency and gauge-independence of the results.
+
+## References
+
+The two WDM fluid-approximation models implemented in this repository are based on the following key works:
+
+- **Quasi-free-streaming model** :  
+  Ma, C.-P., & Bertschinger, E. (1995). Cosmological perturbation theory in the synchronous and conformal Newtonian gauges. *The Astrophysical Journal*, 455, 7.  
+  https://arxiv.org/abs/astro-ph/9506072  
+
+- **Generalized Dark Matter (GDM) framework** :  
+  Hu, W. (1998). Structure formation with generalized dark matter. *The Astrophysical Journal*, 506(2), 485.  
+  https://arxiv.org/abs/astro-ph/9801234  
+
+These references guided me the implementation of perturbation equations, initial conditions, and gauge transformations.
 
 ## Build and Run Instructions
-Tested on Ubuntu Linux with GCC.
+Tested on Ubuntu Linux with WSL.
 
-
-make clean && make -j8   # Compile (fast, ~1 minute)
-./build/class auto_ncdmf_nab_fw50_synchronous.ini   # Run an example
+`make clean && make -j8`   
 
 #CLASS: Cosmic Linear Anisotropy Solving System  {#mainpage}
 ==============================================
