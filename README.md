@@ -27,7 +27,7 @@ These behaviors are broadly consistent with the predictions of the Generalized D
 
 **Key Words**: Warm Dark Matter; Non-cold Dark Matter; Linear Perturbation; Gravitational Lensing; CLASS
 
-→ [Full Thesis PDF](https://your-pdf-link-here)[Chinese]
+→ [Full Thesis PDF](https://1drv.ms/b/c/259523dcb898b7b1/IQBNYo247RukS5_8Xjy_pQUWAbX2aTcY3129u_6vPgHnd3s?e=wL6Zpy)[Chinese]
 
 ## Modifications
 - Primary changes in `source/perturbations.c`(marked with `equation-of-state`) and in `source/background.c`（marked with `adiabatic initial conditions` and with `perturbation equations`): Implemented initial conditions and perturbation equations for both WDM models and equation-of-state for WDM.
