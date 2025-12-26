@@ -13,7 +13,7 @@ Modified CLASS code for my graduation thesis, and also for practise.
 **Supervisor**: Xu Lixin
 
 This repository contains a modified version of the official CLASS (Cosmic Linear Anisotropy Solving System) code to implement and compare two Warm Dark Matter (WDM) fluid-approximation models for my undergraduate thesis. 
-main branch is for **entropy perturbation model** and quasi-free branch for **entropy perturbation model**.
+main branch is for **entropy perturbation model** and quasi-free branch for **quasi-free-streaming model**.
 
 ## Abstract
 
